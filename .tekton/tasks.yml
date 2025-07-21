@@ -1,4 +1,4 @@
-apiVersion: tekton.dev/vibertal
+apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: cleanup
@@ -33,8 +33,8 @@ steps:
         rm -rf "${WORKSPACE_SOURCE_PATH}"/..?*
       fi
 ---
-apiVersion: tekton.dev/vibertal
-kind: task
+apiVersion: tekton.dev/v1beta1
+kind: Task
 metadata:
   name: nose
 spec:
